@@ -1,0 +1,36 @@
+@import '~@angular/material/theming';
+@import 'custom-palette.scss';
+
+@include mat-core();
+
+// Light theme
+$mi-huerto-app-primary: mat-palette($mat-mihuerto-primary);
+$mi-huerto-app-accent:  mat-palette($mat-mihuerto-primary, a200, a100, a400);
+$mi-huerto-app-warn:  mat-palette($mat-mihuerto-warn);
+
+$mi-huerto-app-theme:   mat-light-theme(
+  (
+    color: (
+      primary: $mi-huerto-app-primary,
+      accent: $mi-huerto-app-accent,
+      warn: $mi-huerto-app-warn,
+    )
+  )
+);
+
+@include angular-material-theme($mi-huerto-app-theme);
+
+// Dark theme
+$dark-theme:   mat-dark-theme(
+  (
+    color: (
+      primary: $mi-huerto-app-primary,
+      accent: $mi-huerto-app-accent,
+      warn: $mi-huerto-app-warn,
+    )
+  )
+);
+
+.dark-theme {
+  @include angular-material-color($dark-theme);
+}
