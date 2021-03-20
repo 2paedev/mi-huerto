@@ -66,10 +66,11 @@
           }
         },
         "serve": {
-          "builder": "@angular-devkit/build-angular:dev-server",
+          "builder": "ngx-build-plus:dev-server",
           "options": {
-            "browserTarget": "mi-huerto:build"
-          },
+            "browserTarget": "mi-huerto:build",
+            "extraWebpackConfig": "./cypress/coverage.webpack.js"
+          },          
           "configurations": {
             "production": {
               "browserTarget": "mi-huerto:build:production"

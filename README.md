@@ -8,6 +8,7 @@ An in-depth paragraph about your project and overview of use.
 
 ## Features & Tools
 * Unit test with Karma/Jasmine (coverage)
+* E2E testing with Cypress (coverage)
 * Husky hooks (pre-commit & pre-push)
 
 ## Getting Started
