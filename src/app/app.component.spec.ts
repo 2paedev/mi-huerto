@@ -1,13 +1,10 @@
 import { NO_ERRORS_SCHEMA } from '@angular/compiler';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { MatButtonToggleModule } from '@angular/material/button-toggle';
-import { MatIconModule } from '@angular/material/icon';
-import { MatSidenavModule } from '@angular/material/sidenav';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { By } from '@angular/platform-browser';
+//import { By } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
+import { SharedComponentsModule } from './shared/components/shared-components.module';
 
 describe('AppComponent', () => {
   let component: AppComponent;
@@ -17,10 +14,7 @@ describe('AppComponent', () => {
       imports: [
         BrowserAnimationsModule,
         RouterTestingModule,
-        MatToolbarModule,
-        MatIconModule,
-        MatSidenavModule,
-        MatButtonToggleModule,
+        SharedComponentsModule,
       ],
       declarations: [AppComponent],
       schemas: [NO_ERRORS_SCHEMA],
@@ -34,7 +28,19 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it('should open sidenav when click on menu icon', () => {
+  it('should toggle sidenav variable', () => {
+    expect(component.sidenavOpened).toBeFalse();
+    component.toggleSidenav();
+    expect(component.sidenavOpened).toBeTruthy();
+  });
+
+  it('should set dark theme variable', () => {
+    expect(component.isDarkTheme).toBeFalse();
+    component.setTheme(true);
+    expect(component.isDarkTheme).toBeTruthy();
+  });
+
+  /*it('should open sidenav when click on menu icon', () => {
     component.sidenavOpened = false;
     expect(component.sidenavOpened).toBeFalsy();
 
@@ -60,5 +66,5 @@ describe('AppComponent', () => {
     );
     lightButtonElement.triggerEventHandler('click', null);
     expect(component.isDarkTheme).toBeFalsy();
-  });
+  });*/
 });

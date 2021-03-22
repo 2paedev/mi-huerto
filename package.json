@@ -10,7 +10,7 @@
     "lint": "ng lint && npm run lint:styles",
     "lint:fix": "ng lint --fix",
     "lint:styles": "stylelint \"src/**/*.scss\"",
-    "lint:stylesfix": "stylelint \"src/**/*.scss\" --fix",
+    "lint:styles:fix": "stylelint \"src/**/*.scss\" --fix",
     "e2e": "npx ng run mi-huerto:cypress-run",
     "e2e:watch": "ng e2e",
     "prepare": "husky install"
