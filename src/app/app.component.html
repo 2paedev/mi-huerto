@@ -1,34 +1,10 @@
-<section class="full-screen" [ngClass]="{'dark-theme': isDarkTheme}">
-  <mat-toolbar color="primary">
-    <button mat-icon-button (click)="toggleSidenav()">
-      <mat-icon>menu</mat-icon>
-    </button>
-    <h1 class="example-app-name">Mi Huerto</h1>
-    <mat-button-toggle-group #group="matButtonToggleGroup">
-      <mat-button-toggle
-        checked
-        value="left"
-        aria-label="Light mode"
-        (click)="toggleTheme()"
-      >
-        <mat-icon>light_mode</mat-icon>
-      </mat-button-toggle>
-      <mat-button-toggle
-        value="center"
-        aria-label="Dark mode"
-        (click)="toggleTheme()"
-      >
-        <mat-icon>dark_mode</mat-icon>
-      </mat-button-toggle>
-    </mat-button-toggle-group>
-  </mat-toolbar>
-  <mat-sidenav-container class="full-screen">
-    <mat-sidenav #sidenav mode="side" [(opened)]="sidenavOpened">
-      Sidenav content
-    </mat-sidenav>
+<section class="full-screen app" [ngClass]="{'dark-theme': isDarkTheme}">
+  <huerto-toolbar
+    (dark)="setTheme($event)"
+    (sidenav)="toggleSidenav()"
+  ></huerto-toolbar>
 
-    <mat-sidenav-content>
-      <router-outlet></router-outlet>
-    </mat-sidenav-content>
-  </mat-sidenav-container>
+  <huerto-sidenav [open]="sidenavOpened" (backdropClick)="toggleSidenav()">
+    <router-outlet></router-outlet>
+  </huerto-sidenav>
 </section>

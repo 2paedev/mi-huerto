@@ -1,0 +1,34 @@
+<mat-toolbar class="toolbar" color="primary">
+  <button
+    class="toolbar__menu"
+    mat-icon-button
+    color="accent"
+    (click)="toggleSidenav()"
+    aria-label="Menu button"
+  >
+    <mat-icon>menu</mat-icon>
+  </button>
+  <img class="toolbar__logo" src="assets/images/logo.png" />
+  <mat-button-toggle-group
+    class="btn-toggle-group-toolbar"
+    #group="matButtonToggleGroup"
+  >
+    <mat-button-toggle
+      class="btn-toggle-toolbar light-theme-btn"
+      checked
+      value="left"
+      aria-label="Light mode"
+      (click)="setDarkTheme(false)"
+    >
+      <mat-icon>light_mode</mat-icon>
+    </mat-button-toggle>
+    <mat-button-toggle
+      class="dark-theme-btn"
+      value="right"
+      aria-label="Dark mode"
+      (click)="setDarkTheme(true)"
+    >
+      <mat-icon>dark_mode</mat-icon>
+    </mat-button-toggle>
+  </mat-button-toggle-group>
+</mat-toolbar>

@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { OverlayContainer } from '@angular/cdk/overlay';
 
 @Component({
-  selector: 'app-root',
+  selector: 'huerto-root',
   templateUrl: './app.component.html',
 })
 export class AppComponent {
@@ -17,7 +17,7 @@ export class AppComponent {
     this.sidenavOpened = !this.sidenavOpened;
   }
 
-  toggleTheme(): void {
-    this.isDarkTheme = !this.isDarkTheme;
+  setTheme(isDark: boolean): void {
+    this.isDarkTheme = isDark;
   }
 }

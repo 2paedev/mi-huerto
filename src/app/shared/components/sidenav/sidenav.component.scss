@@ -1,0 +1,5 @@
+@import "src/app/shared/styles/helpers/variables";
+
+.sidenav {
+  height: calc(100% - #{$header-height});
+}

@@ -1,15 +1,15 @@
 # Mi Huerto
 
-Aplicación para la gestión de tu propio huerto.
+Manage your garden and allotment
 
 ## Description
 
-An in-depth paragraph about your project and overview of use.
+Companion planting applications.
 
 ## Features & Tools
 * Unit test with Karma/Jasmine (coverage)
 * E2E testing with Cypress (coverage)
-* Angular Material
+* Angular Material (custom theme & typography)
 * Husky hooks (pre-commit & pre-push)
 * Lazy loading modules
 
