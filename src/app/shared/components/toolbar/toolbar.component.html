@@ -1,14 +1,14 @@
 <mat-toolbar class="toolbar" color="primary">
   <button
-    class="toolbar__menu"
+    class="toolbar--menu"
     mat-icon-button
-    color="accent"
+    color="'primary'"
     (click)="toggleSidenav()"
     aria-label="Menu button"
   >
     <mat-icon>menu</mat-icon>
   </button>
-  <img class="toolbar__logo" src="assets/images/logo.png" />
+  <img class="toolbar--logo" src="assets/images/logo.png" />
   <mat-button-toggle-group
     class="btn-toggle-group-toolbar"
     #group="matButtonToggleGroup"

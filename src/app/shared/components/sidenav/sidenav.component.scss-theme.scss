@@ -1,0 +1,30 @@
+@import "~@angular/material/theming";
+
+@mixin sidenav-component-theme($theme) {
+  $primary: map-get($theme, primary);
+  $accent: map-get($theme, accent);
+  $warn: map-get($theme, warn);
+  $foreground: map-get($theme, foreground);
+  $background: map-get($theme, background);
+
+  .mat-sidenav {
+    background-color: mat-color($background, app-bar);
+
+    //To set same color that Toolbar is
+    &[color="primary"] {
+      @include _mat-toolbar-color($primary);
+    }
+
+    &[color="accent"] {
+      @include _mat-toolbar-color($accent);
+    }
+
+    &[color="warn"] {
+      @include _mat-toolbar-color($warn);
+    }
+
+    .mat-nav-list a {
+      color: mat-color($foreground, text);
+    }
+  }
+}

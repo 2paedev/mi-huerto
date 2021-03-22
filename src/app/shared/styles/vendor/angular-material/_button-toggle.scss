@@ -1,21 +1,10 @@
 .btn-toggle-group-toolbar {
   &.mat-button-toggle-group-appearance-standard {
     border-radius: 1rem !important;
-    border: 1px solid white !important;
   }
 }
 
 .btn-toggle-toolbar {
-  &.mat-button-toggle {
-    background: transparent !important; //theming
-    color: white !important; //theming
-    opacity: 0.5;
-  }
-
-  &.mat-button-toggle-checked {
-    opacity: 1;
-  }
-
   .mat-button-toggle-label-content {
     line-height: 1rem !important;
   }

@@ -37,7 +37,7 @@ describe('ToolbarComponent', () => {
 
   it('should fire sidenav event when click menu btn', () => {
     spyOn(component.sidenav, 'emit');
-    const menuBtn = fixture.debugElement.query(By.css('.toolbar__menu'));
+    const menuBtn = fixture.debugElement.query(By.css('.toolbar--menu'));
     menuBtn.triggerEventHandler('click', null);
     expect(component.sidenav.emit).toHaveBeenCalled();
   });

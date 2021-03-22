@@ -1,0 +1,7 @@
+@import "./src/app/shared/components/sidenav/sidenav.component.scss-theme.scss";
+@import "./src/app/shared/components/toolbar/toolbar.component.scss-theme.scss";
+
+@mixin custom-components-theme($theme) {
+  @include sidenav-component-theme($theme);
+  @include toolbar-component-theme($theme);
+}
