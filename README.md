@@ -1,27 +1,146 @@
-# MiHuerto
+# Mi Huerto
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.0.
+Manage your garden and allotment
 
-## Development server
+## Description
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Companion planting applications.
 
-## Code scaffolding
+## Live demo
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Here is a working live demo : https://mi-huerto-ab565.web.app
 
-## Build
+## Table of contents
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- [Status](#status)
+- [Quick Start](#quick-start)
+- [Tasks](#tasks)
+- [Hooks](#hooks)
+- [Deployment](#deployment)
+- [Author](#author)
+- [Version History](#version-history)
+- [License](#license)
 
-## Running unit tests
+### Status
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+> Dependencies
 
-## Running end-to-end tests
+- [x] Angular : 13.3.0
+- [x] Angular CLI : 13.3.0
+- [x] Angular Material : 13.3.1
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+> Features
 
-## Further help
+- [x] Routing
+- [x] Lazy Loading
+- [x] Responsive Layout
+- [x] Components
+- [x] Services
+- [x] Reactive Form
+- [x] Sass CSS (BEM)
+- [x] Custom theming
+- [x] Data Store with REDUX and NgRx
+- [x] Linters (Typescript and CSS)
+- [x] Git hooks
+- [x] Unit testing (karma-spec-reporter & coverage)
+- [x] E2E (Cypress)
+- [x] Firebase hosting
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+### Quick Start
+
+```bash
+# download the example or clone the repo from github
+git clone https://github.com/2paedev/mi-huerto.git
+
+# change directory
+cd mi-huerto
+
+# install the repo with npm
+npm install
+
+# start the development server
+npm run start
+
+```
+
+in your browser go to [http://localhost:4200](http://localhost:4200)
+
+### Tasks
+
+- Localhost server
+
+```bash
+#!/bin/bash
+npm run start
+```
+
+- Unit test (no-watch)
+
+```bash
+#!/bin/bash
+npm run test
+```
+
+- Unit test (watch)
+
+```bash
+#!/bin/bash
+npm run test:watch
+```
+
+- Unit test (coverage)
+
+```bash
+#!/bin/bash
+npm run test:coverage
+```
+
+- E2E test (watch)
+
+```bash
+#!/bin/bash
+npm run e2e
+```
+
+- E2E test (no-watch)
+
+```bash
+#!/bin/bash
+npm run e2e:ci
+```
+
+### Hooks
+
+Husky hooks are installed, pre-commit and pre-push are configured.
+
+> [pre-commit] : npm run lint && npm run lint:styles
+
+> [pre-push] : npm run test
+
+### Deployment
+
+```bash
+# Log with credentials
+firebase login
+
+# Build frontend project
+cd mi-huerto
+npm run build
+
+# Deploy
+firebase deploy
+```
+
+### Author
+
+- Author : 2PaeDev
+- Github : https://github.com/2paedev
+
+### Version History
+
+- 0.1
+  - Initial Release
+
+### License
+
+This project is licensed under the MIT License
