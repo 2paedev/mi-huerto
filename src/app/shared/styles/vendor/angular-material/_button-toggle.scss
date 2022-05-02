@@ -1,0 +1,27 @@
+.dark-theme .btn-toggle-group-toolbar,
+.btn-toggle-group-toolbar {
+  &.mat-button-toggle-group-appearance-standard {
+    border-radius: 1rem;
+  }
+
+  .mat-button-toggle + .mat-button-toggle {
+    border-left: none !important;
+  }
+}
+
+.btn-toggle-toolbar,
+.dark-theme .btn-toggle-toolbar {
+  .mat-button-toggle-label-content {
+    line-height: 1rem;
+    top: -2px;
+  }
+
+  .mat-icon {
+    width: 1rem;
+    height: 1rem;
+  }
+
+  .material-icons {
+    font-size: 1rem;
+  }
+}

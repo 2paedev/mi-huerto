@@ -1,0 +1,11 @@
+<mat-card class="plants-panel" *ngIf="selectedPlant">
+  <huerto-plants-group
+    title="Asociaciones beneficiosas"
+    [plants]="selectedPlant?.companions"></huerto-plants-group>
+
+  <mat-divider [vertical]="true"></mat-divider>
+
+  <huerto-plants-group
+    title="Asociaciones perjudiciales"
+    [plants]="selectedPlant?.rivals"></huerto-plants-group>
+</mat-card>

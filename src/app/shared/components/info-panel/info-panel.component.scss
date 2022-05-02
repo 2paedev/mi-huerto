@@ -1,0 +1,24 @@
+@import 'mixins';
+@import 'mediaqueries';
+
+.info-panel {
+  @include flexbox-align-direction;
+
+  margin: 2rem 10% 1rem;
+  text-align: center;
+
+  mat-icon {
+    transform: scale(2);
+    margin-left: 0.5rem;
+  }
+
+  &__text {
+    margin-left: 1rem;
+  }
+}
+
+@include screen-max-width(small) {
+  .info-panel {
+    margin: 0 0 1rem;
+  }
+}

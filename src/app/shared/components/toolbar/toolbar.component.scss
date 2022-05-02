@@ -1,0 +1,14 @@
+@import 'src/app/shared/styles/helpers/variables';
+
+.toolbar {
+  height: $header-height;
+  justify-content: space-between;
+
+  &__menu-icon {
+    font-size: 2rem;
+  }
+
+  &__logo {
+    height: 150%;
+  }
+}

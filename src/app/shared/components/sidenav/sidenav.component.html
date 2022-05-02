@@ -1,0 +1,31 @@
+<mat-sidenav-container class="sidenav" (backdropClick)="backdropAction()">
+  <mat-sidenav #sidenav mode="over" hasBackdrop="true" [(opened)]="open" [attr.color]="'primary'">
+    <mat-nav-list>
+      <mat-list-item>
+        <mat-icon matListIcon>home</mat-icon>
+        <a matLine href="/home">Mi Huerto</a>
+      </mat-list-item>
+
+      <mat-list-item>
+        <mat-icon matListIcon>eco</mat-icon>
+        <a matLine href="/companion-planting">Asociación de cultivos</a>
+      </mat-list-item>
+
+      <mat-divider></mat-divider>
+
+      <mat-list-item>
+        <mat-icon matListIcon>settings</mat-icon>
+        <a matLine href="/settings">Configuración</a>
+      </mat-list-item>
+
+      <mat-list-item position="end">
+        <mat-icon matListIcon>info</mat-icon>
+        <a matLine href="/help">Ayuda</a>
+      </mat-list-item>
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <ng-content></ng-content>
+  </mat-sidenav-content>
+</mat-sidenav-container>

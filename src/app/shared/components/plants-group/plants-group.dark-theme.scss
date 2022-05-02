@@ -1,0 +1,29 @@
+@use 'sass:map';
+@use '@angular/material' as mat;
+
+@mixin color($theme) {
+  $color-config: mat.get-color-config($theme);
+  $accent: map.get($color-config, 'accent');
+
+  .plants-group {
+    &__title {
+      color: mat.get-color-from-palette($accent, 100);
+    }
+  }
+}
+
+@mixin typography($theme) {
+  // $typography-config: mat.get-typography-config($theme);
+}
+
+// TODO : repeated too many files, see refactor
+@mixin theme($theme, $typography-config) {
+  $color-config: mat.get-color-config($theme);
+  @if $color-config {
+    @include color($theme);
+  }
+
+  @if $typography-config {
+    @include typography($typography-config);
+  }
+}

@@ -1,0 +1,10 @@
+// Custom Theming for Angular Material. Doc: https://indepth.dev/tutorials/angular/angular-material-theming-system-complete-guide
+@use '@angular/material' as mat;
+@use 'config/typography';
+@use 'config/light-theme';
+@use 'components';
+
+@include mat.core(typography.$custom-typography-config);
+@include mat.all-component-themes(light-theme.$theme); // TODO: importar solamente los componentes que se utilizan
+@include components.theme-light(light-theme.$theme, typography.$custom-typography-config);
+

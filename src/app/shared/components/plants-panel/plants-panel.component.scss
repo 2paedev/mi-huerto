@@ -1,0 +1,24 @@
+@import 'mediaqueries';
+
+.plants-panel {
+  display: flex;
+  margin: 0 8rem;
+  padding: 1rem 0;
+
+  huerto-plants-group {
+    width: 50%;
+  }
+}
+
+
+@include screen-max-width(medium) {
+  .plants-panel {
+    margin: 0 3rem;
+  }
+}
+
+@include screen-max-width(small) {
+  .plants-panel {
+    margin: 0;
+  }
+}

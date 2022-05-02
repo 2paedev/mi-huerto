@@ -1,0 +1,70 @@
+@use 'sass:map';
+@use '@angular/material' as mat;
+
+@mixin color($theme) {
+  $color-config: mat.get-color-config($theme);
+  $primary: map.get($color-config, 'primary');
+  $background: map.get($color-config, 'background');
+  $foreground: map.get($color-config, 'foreground');
+
+  .select {
+    .mat-select-value,
+    .mat-select-arrow,
+    .mat-form-field-label {
+      color: mat.get-color-from-palette($foreground, text);
+    }
+  }
+
+  .select-component {
+    &.mat-select-panel {
+      background: mat.get-color-from-palette($primary, 200);
+    }
+
+    .mat-option {
+      &-text {
+        color: mat.get-color-from-palette($foreground, text);
+      }
+
+      &:hover {
+        background: mat.get-color-from-palette($primary, 100);
+      }
+
+      &.mat-selected:not(.mat-option-disabled) {
+        background: mat.get-color-from-palette($primary, 300);
+      }
+    }
+  }
+
+  .mat-form-field-appearance-outline .mat-form-field-outline {
+    color: mat.get-color-from-palette($foreground, text);
+    
+    & > * {
+      background-color: mat.get-color-from-palette($background, card);
+    }
+  }
+
+  .mat-form-field-appearance-outline .mat-form-field-outline-gap {
+    border: 1px solid currentcolor;
+    min-width: 5px;
+  }
+}
+
+@mixin typography($theme) {
+  $typography-config: mat.get-typography-config($theme);
+
+  .select {
+    @include mat.typography-level($typography-config, 'subheading-1');
+  }
+}
+
+// TODO : repeated too many files, see refactor
+@mixin theme($theme, $typography-config) {
+  $color-config: mat.get-color-config($theme);
+  @if $color-config {
+    @include color($theme);
+  }
+
+  @if $typography-config {
+    @include typography($typography-config);
+  }
+}

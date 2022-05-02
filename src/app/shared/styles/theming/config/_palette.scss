@@ -1,0 +1,246 @@
+@use 'sass:map';
+
+$primary-palette: (
+  50: #e7efe4,
+  100: #c3d6bb,
+  200: #9cbb8e,
+  300: #749f61,
+  400: #568b3f,
+  500: #38761d,
+  600: #326e1a,
+  700: #2b6315,
+  800: #245911,
+  900: #17460a,
+  A100: #94ff7d,
+  A200: #6aff4a,
+  A400: #40ff17,
+  A700: #2dfc00,
+  contrast: (
+    50: #000,
+    100: #000,
+    200: #000,
+    300: #000,
+    400: #fff,
+    500: #fff,
+    600: #fff,
+    700: #fff,
+    800: #fff,
+    900: #fff,
+    A100: #000,
+    A200: #000,
+    A400: #000,
+    A700: #000
+  )
+);
+
+$accent-palette: (
+  50: #efe8e1,
+  100: #d7c5b4,
+  200: #bc9f82,
+  300: #a1794f,
+  400: #8c5c2a,
+  500: #783f04,
+  600: #703903,
+  700: #653103,
+  800: #5b2902,
+  900: #38251a,
+  A100: #ffc282,
+  A200: #fdb465,
+  A400: #fca345,
+  A700: #ff8400,
+  contrast: (
+    50: #000,
+    100: #000,
+    200: #000,
+    300: #000,
+    400: #fff,
+    500: #fff,
+    600: #fff,
+    700: #fff,
+    800: #fff,
+    900: #fff,
+    A100: #000,
+    A200: #000,
+    A400: #000,
+    A700: #000
+  )
+);
+
+$warn-palette: (
+  50: #f3e0e0,
+  100: #e0b3b3,
+  200: #cc8080,
+  300: #b84d4d,
+  400: #a82626,
+  500: #900,
+  600: #910000,
+  700: #860000,
+  800: #7c0000,
+  900: #6b0000,
+  A100: #ff9a9a,
+  A200: #ff6767,
+  A400: #ff3434,
+  A700: #ff1a1a,
+  contrast: (
+    50: #000,
+    100: #000,
+    200: #000,
+    300: #fff,
+    400: #fff,
+    500: #fff,
+    600: #fff,
+    700: #fff,
+    800: #fff,
+    900: #fff,
+    A100: #000,
+    A200: #000,
+    A400: #fff,
+    A700: #fff
+  )
+);
+
+$grey-palette: (
+  50: #fafafa,
+  100: #ebebeb,
+  200: #eee,
+  300: #050404,
+  400: #bdbdbd,
+  500: #9e9e9e,
+  600: #757575,
+  700: #616161,
+  800: #424242,
+  900: #212121,
+  A100: #fff,
+  A200: #eee,
+  A400: #bdbdbd,
+  A700: #616161,
+  contrast: (
+    50: rgb(0,0,0, 0.87),
+    100: rgb(0,0,0, 0.87),
+    200: rgb(0,0,0, 0.87),
+    300: rgb(0,0,0, 0.87),
+    400: rgb(0,0,0, 0.87),
+    500: rgb(0,0,0, 0.87),
+    600: white,
+    700: white,
+    800: white,
+    900: white,
+    A100: rgb(0,0,0, 0.87),
+    A200: rgb(0,0,0, 0.87),
+    A400: rgb(0,0,0, 0.87),
+    A700: white
+  )
+);
+
+$background-light-palette: (
+  status-bar: map.get($grey-palette, 300),
+  app-bar: map.get($grey-palette, 100),
+  background: map.get($primary-palette, 50),
+  hover: rgb(0, 0, 0, 0.04),
+  card: white,
+  dialog: map.get($primary-palette, 50),
+  disabled-button: rgb(0, 0, 0, 0.12),
+  raised-button: map.get($primary-palette, 50),
+  focused-button: rgb(0,0,0, 0.12),
+  selected-button: map.get($grey-palette, 300),
+  selected-disabled-button: map.get($grey-palette, 400),
+  disabled-button-toggle: map.get($grey-palette, 200),
+  unselected-chip: map.get($grey-palette, 300),
+  disabled-list-option: map.get($grey-palette, 200),
+  tooltip: map.get($grey-palette, 700)
+);
+
+$background-dark-palette: (
+  status-bar: map.get($grey-palette, 300),
+  app-bar: map.get($grey-palette, 100),
+  background: map.get($accent-palette, 900),
+  hover: rgb(0,0,0, 0.04),
+  card: map.get($accent-palette, 400),
+  dialog: map.get($accent-palette, 900),
+  disabled-button: rgb(0,0,0, 0.12),
+  raised-button: map.get($accent-palette, 900),
+  focused-button: rgb(0,0,0, 0.12),
+  selected-button: map.get($grey-palette, 300),
+  selected-disabled-button: map.get($grey-palette, 400),
+  disabled-button-toggle: map.get($grey-palette, 200),
+  unselected-chip: map.get($grey-palette, 300),
+  disabled-list-option: map.get($grey-palette, 200),
+  tooltip: map.get($grey-palette, 700)
+);
+
+$foreground-light-base-color: map.get($accent-palette, 700);
+$foreground-light-palette: (
+  base: $foreground-light-base-color,
+  divider: rgba($foreground-light-base-color, 0.12),
+  dividers: rgba($foreground-light-base-color, 0.12),
+  disabled: rgba($foreground-light-base-color, 0.38),
+  disabled-button: rgba($foreground-light-base-color, 0.26),
+  disabled-text: rgba($foreground-light-base-color, 0.38),
+  elevation: $foreground-light-base-color,
+  hint-text: rgba($foreground-light-base-color, 0.38),
+  secondary-text: rgba($foreground-light-base-color, 0.54),
+  icon: rgba($foreground-light-base-color, 0.54),
+  icons: rgba($foreground-light-base-color, 0.54),
+  text: rgba($foreground-light-base-color, 0.87),
+  slider-min: rgba($foreground-light-base-color, 0.87),
+  slider-off: rgba($foreground-light-base-color, 0.26),
+  slider-off-active: rgba($foreground-light-base-color, 0.38)
+);
+
+$foreground-dark-base-color: map.get($accent-palette, 100);
+$foreground-dark-palette: (
+  base: $foreground-dark-base-color,
+  divider: rgba($foreground-dark-base-color, 0.12),
+  dividers: rgba($foreground-dark-base-color, 0.12),
+  disabled: rgba($foreground-dark-base-color, 0.38),
+  disabled-button: rgba($foreground-dark-base-color, 0.26),
+  disabled-text: rgba($foreground-dark-base-color, 0.38),
+  elevation: $foreground-dark-base-color,
+  hint-text: rgba($foreground-dark-base-color, 0.38),
+  secondary-text: rgba($foreground-dark-base-color, 0.54),
+  icon: rgba($foreground-dark-base-color, 0.54),
+  icons: rgba($foreground-dark-base-color, 0.54),
+  text: rgba($foreground-dark-base-color, 0.87),
+  slider-min: rgba($foreground-dark-base-color, 0.87),
+  slider-off: rgba($foreground-dark-base-color, 0.26),
+  slider-off-active: rgba($foreground-dark-base-color, 0.38)
+);
+
+/* @function foreground-palette($color) {
+  @return (
+    base: $color,
+    divider: $black-12-opacity,
+    dividers: $black-12-opacity,
+    disabled: rgba($color, 0.38),
+    disabled-button: rgba($color, 0.38),
+    disabled-text: rgba($color, 0.38),
+    hint-text: rgba($color, 0.38),
+    secondary-text: rgba($color, 0.54),
+    icon: rgba($color, 0.54),
+    icons: rgba($color, 0.54),
+    text: rgba($color, 0.87),
+    slider-min: rgba($color, 0.87),
+    slider-off: rgba($color, 0.26),
+    slider-off-active: rgba($color, 0.38)
+  );
+} */
+
+/* @function background-palette($color) {
+  @return (
+    // status-bar: map-get(mat.$grey-palette, 300),
+    // app-bar: map-get(mat.$grey-palette, 100),
+    background: $color,
+    // hover: rgba(0,0,0/ 0.04),
+    // card: white,
+    dialog: white,
+    // disabled-button: rgba(0,0,0 / 0.12),
+    // raised-button: white,
+    // focused-button: $my-dark-focused,
+    // selected-button: map-get(mat.$grey-palette, 300),
+    // selected-disabled-button: map-get(mat.$grey-palette, 400),
+    // disabled-button-toggle: map-get(mat.$grey-palette, 200),
+    // unselected-chip: map-get(mat.$grey-palette, 300),
+    // disabled-list-option: map-get(mat.$grey-palette, 200),
+    // tooltip: map-get(mat.$grey-palette, 700)
+  );
+} */

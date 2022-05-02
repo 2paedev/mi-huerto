@@ -1,0 +1,7 @@
+<section>
+  <huerto-info-panel [text]="infoPanelText"></huerto-info-panel>
+
+  <huerto-select [data]="allPlants$" (selected)="setSelectedPlant($event)"></huerto-select>
+
+  <huerto-plants-panel [selectedPlant]="selectedPlant"></huerto-plants-panel>
+</section>

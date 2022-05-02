@@ -1,0 +1,34 @@
+@use '@angular/material' as mat;
+@use 'sass:map';
+@use 'palette';
+@use 'typography';
+@use '../components';
+
+$theme: mat.define-dark-theme(
+  (
+    color: (
+      primary: mat.define-palette(palette.$primary-palette, 400),
+      accent: mat.define-palette(palette.$accent-palette, 500),
+      warn: mat.define-palette(palette.$warn-palette, 400)
+    )
+  )
+);
+
+$theme: map.set(
+  $theme,
+  color,
+  background,
+  palette.$background-dark-palette
+);
+
+$theme: map.set(
+  $theme,
+  color,
+  foreground,
+  palette.$foreground-dark-palette
+);
+
+.dark-theme {
+  @include mat.all-component-colors($theme); // TODO: importar solamente los componentes que se utilizan
+  @include components.theme-dark($theme, typography.$custom-typography-config);
+}

@@ -15,7 +15,7 @@
       },
       "root": "",
       "sourceRoot": "src",
-      "prefix": "app",
+      "prefix": "huerto",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -27,7 +27,17 @@
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": ["src/favicon.ico", "src/assets"],
-            "styles": ["src/styles.scss"],
+            "styles": [
+              "src/app/shared/styles/styles.scss",
+              {
+                "input": "src/app/shared/styles/theming/config/_dark-theme.scss",
+                "bundleName": "dark-theme",
+                "inject": false
+              }
+            ],
+            "stylePreprocessorOptions": {
+              "includePaths": ["./src/app/shared/styles/helpers"]
+            },
             "scripts": []
           },
           "configurations": {
@@ -90,7 +100,10 @@
             "karmaConfig": "karma.conf.js",
             "inlineStyleLanguage": "scss",
             "assets": ["src/favicon.ico", "src/assets"],
-            "styles": ["src/styles.scss"],
+            "styles": ["src/app/shared/styles/styles.scss"],
+            "stylePreprocessorOptions": {
+              "includePaths": ["./src/app/shared/styles/helpers"]
+            },
             "scripts": []
           }
         },

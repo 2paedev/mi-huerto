@@ -1,0 +1,51 @@
+@use 'sass:map';
+@use '@angular/material' as mat;
+
+@mixin color($theme) {
+  $color-config: mat.get-color-config($theme);
+  $primary: map.get($color-config, 'primary');
+  $accent: map.get($color-config, 'accent');
+
+  .toolbar {
+    background-color: mat.get-color-from-palette($primary, 300);
+
+    &__menu {
+      color: mat.get-color-from-palette($accent, 700);
+    }
+
+    &__theme {
+      border-color: mat.get-color-from-palette($accent, 700);
+    }
+
+    .mat-button-toggle-appearance-standard {
+      background-color: mat.get-color-from-palette($accent, 600);
+      opacity: 0.5;
+    }
+
+    .mat-button-toggle-label-content {
+      color: mat.get-color-from-palette($accent, 100);
+    }
+
+    .mat-button-toggle-checked {
+      opacity: 1;
+    }
+  }
+}
+
+@mixin typography($theme) {
+  // $typography-config: mat.get-typography-config($theme);
+}
+
+// TODO : repeated too many files, see refactor
+@mixin theme($theme, $typography-config) {
+  $color-config: mat.get-color-config($theme);
+  @if $color-config {
+    @include color($theme);
+  }
+
+  @if $typography-config {
+    @include typography($typography-config);
+  }
+}
+
+

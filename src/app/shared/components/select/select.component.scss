@@ -1,0 +1,28 @@
+@import 'mediaqueries';
+@import 'mixins';
+
+.select {
+  @include flexbox-align-direction;
+
+  &--field {
+    width: 14rem;
+
+    .mat-select-value {
+      padding-left: 1rem;
+    }
+  }
+}
+
+.select-component {
+  &.mat-select-panel {
+    max-height: 60vh;
+  }
+}
+
+@include screen-max-width(small) {
+  .select {
+    &--field {
+      width: 100vw;
+    }
+  }
+}

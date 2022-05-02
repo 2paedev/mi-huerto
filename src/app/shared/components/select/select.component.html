@@ -1,0 +1,16 @@
+<div class="select">
+  <mat-form-field class="select--field" color="accent" appearance="outline">
+    <mat-label>Selecciona el producto</mat-label>
+    <mat-select
+      [(value)]="option"
+      (selectionChange)="plantChange($event.value)"
+      panelClass="select-component">
+      <mat-select-trigger class="select__trigger">
+        <huerto-plant [imageUrl]="option?.imageUrl" [name]="option?.name"></huerto-plant>
+      </mat-select-trigger>
+      <mat-option *ngFor="let plant of data | async" [value]="plant">
+        <huerto-plant [imageUrl]="plant?.imageUrl" [name]="plant?.name"></huerto-plant>
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>

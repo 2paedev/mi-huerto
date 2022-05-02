@@ -1,0 +1,47 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
+  letter-spacing: 0.5px;
+}
+
+.cdk-overlay-pane {
+  transform:  translateX(-16px) translateY(-19px)!important;
+}
+
+// Custom scrollbar
+::-webkit-scrollbar {
+  width: 0.6rem;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #568b3f;
+  border-radius: 5rem;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 5rem;
+  background: #326e1a;
+  border: 2px solid rgb(0 0 0 / 20%);
+}
+
+.dark-theme {
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color: #8c5c2a;
+    border-radius: 100px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    border-radius: 100px;
+    background: #703903;
+    border: 6px solid rgb(0 0 0 / 20%);
+  }
+}

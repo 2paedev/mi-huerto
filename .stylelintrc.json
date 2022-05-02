@@ -1,6 +1,6 @@
 {
   "extends": ["stylelint-config-standard-scss", "stylelint-config-prettier-scss"],
-  "ignoreFiles": ["src/styles.scss"],
+  "ignoreFiles": ["src/styles.scss", "src/app/shared/styles/theming/config/_palette.scss"],
   "rules": {
     "comment-empty-line-before": "always",
     "indentation": [2],

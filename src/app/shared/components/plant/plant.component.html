@@ -1,0 +1,4 @@
+<div class="plant" [ngClass]="{ 'plant--outlined': outlined }">
+  <img class="plant__icon" [src]="imageUrl" />
+  <span class="plant__text" [ngClass]="fontClass || ''">{{ name }}</span>
+</div>

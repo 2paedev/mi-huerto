@@ -1,0 +1,34 @@
+@use 'src/app/shared/components/sidenav/sidenav.light-theme' as sidenavLight;
+@use 'src/app/shared/components/sidenav/sidenav.dark-theme' as sidenavDark;
+@use 'src/app/shared/components/toolbar/toolbar.light-theme' as toolbarLight;
+@use 'src/app/shared/components/toolbar/toolbar.dark-theme' as toolbarDark;
+@use 'src/app/shared/components/info-panel/info-panel.light-theme' as infoPanelLight;
+@use 'src/app/shared/components/info-panel/info-panel.dark-theme' as infoPanelDark;
+@use 'src/app/shared/components/plants-panel/plants-panel.light-theme' as plantsPanelLight;
+@use 'src/app/shared/components/plants-panel/plants-panel.dark-theme' as plantsPanelDark;
+@use 'src/app/shared/components/plants-group/plants-group.light-theme' as plantsGroupLight;
+@use 'src/app/shared/components/plants-group/plants-group.dark-theme' as plantsGroupDark;
+@use 'src/app/shared/components/plant/plant.light-theme' as plantLight;
+@use 'src/app/shared/components/plant/plant.dark-theme' as plantDark;
+@use 'src/app/shared/components/select/select.light-theme' as selectLight;
+@use 'src/app/shared/components/select/select.dark-theme' as selectDark;
+
+@mixin theme-light($theme, $typography-config) {
+  @include sidenavLight.theme($theme, $typography-config);
+  @include toolbarLight.theme($theme, $typography-config);
+  @include infoPanelLight.theme($theme, $typography-config);
+  @include plantsPanelLight.theme($theme, $typography-config);
+  @include plantsGroupLight.theme($theme, $typography-config);
+  @include plantLight.theme($theme, $typography-config);
+  @include selectLight.theme($theme, $typography-config);
+}
+
+@mixin theme-dark($theme, $typography-config) {
+  @include sidenavDark.theme($theme, $typography-config);
+  @include toolbarDark.theme($theme, $typography-config);
+  @include infoPanelDark.theme($theme, $typography-config);
+  @include plantsPanelDark.theme($theme, $typography-config);
+  @include plantsGroupDark.theme($theme, $typography-config);
+  @include plantDark.theme($theme, $typography-config);
+  @include selectDark.theme($theme, $typography-config);
+}

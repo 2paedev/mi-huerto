@@ -1,0 +1,32 @@
+@import 'mixins';
+@import 'mediaqueries';
+
+.plants-group {
+  margin: 0 1rem;
+
+  &__title {
+    text-align: center;
+    max-height: 2rem;
+  }
+
+  .mat-divider {
+    position: relative;
+  }
+
+  &__wrapper {
+    @include flexbox-align-direction;
+
+    flex-wrap: wrap;
+
+    &--item {
+      margin: 0.7rem;
+    }
+  }
+}
+
+@include screen-max-width(small) {
+  .plants-group__title {
+    font-size: 1rem;
+    line-height: 1.3rem;    
+  }
+}

@@ -1,0 +1,15 @@
+<section class="plants-group">
+  <h2 class="plants-group__title ellipsis">{{ title }}</h2>
+
+  <mat-divider></mat-divider>
+
+  <div class="plants-group__wrapper">
+    <div class="plants-group__wrapper--item" *ngFor="let plant of plants">
+      <huerto-plant
+        [imageUrl]="(getPlant(plant) | async)?.imageUrl"
+        [name]="(getPlant(plant) | async)?.name"
+        [outlined]="true"
+        fontClass="mat-small"></huerto-plant>
+    </div>
+  </div>
+</section>
