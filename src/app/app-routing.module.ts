@@ -17,6 +17,11 @@ const routes: Routes = [
       (await import('./pages/companion-planting/companion-planting.module')).CompanionPlantingModule
   },
   {
+    path: 'terrace-creator',
+    loadChildren: async (): Promise<typeof CompanionPlantingModule> =>
+      (await import('./pages/terrace-creator/terrace-creator.module')).TerraceCreatorModule
+  },
+  {
     path: 'settings',
     loadChildren: async (): Promise<typeof SettingsModule> =>
       (await import('./pages/settings/settings.module')).SettingsModule
